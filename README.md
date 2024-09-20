@@ -82,7 +82,7 @@ If you read the title you already know it will not work as expected, but let's c
 
 ## Demo script
 
-Create a new Workspace, setup the CLI, and run `tb auth` for authentication. Then, run `./demoscript.sh`
+[Create a new Workspace](https://app.tinybird.co/signup), setup the CLI, and run `tb auth` for authentication. Then, run `./demoscript.sh`
 
 ```bash
 tb push
