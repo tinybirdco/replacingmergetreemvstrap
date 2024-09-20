@@ -1,0 +1,17 @@
+DESCRIPTION >
+	Pipe that materializes the total views
+
+
+NODE channel_views
+SQL >
+
+    SELECT
+        channel,
+        sumState(views) AS total_views
+    FROM yt_views
+    GROUP BY channel
+
+TYPE materialized
+DATASOURCE channel_views_mv
+
+

@@ -1,0 +1,9 @@
+DESCRIPTION >
+    # Data Source created from Pipe 'channel_views_mat'
+
+SCHEMA >
+    `channel` LowCardinality(String),
+    `total_views` AggregateFunction(sum, Int16)
+
+ENGINE "AggregatingMergeTree"
+ENGINE_SORTING_KEY "channel"

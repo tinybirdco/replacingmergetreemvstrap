@@ -1,0 +1,12 @@
+DESCRIPTION >
+    Latest count of views per video
+
+SCHEMA >
+    `video_id` String,
+    `channel` LowCardinality(String),
+    `timestamp` DateTime,
+    `views` Int16
+
+ENGINE "ReplacingMergeTree"
+ENGINE_SORTING_KEY "channel,video_id"
+ENGINE_VER "timestamp"

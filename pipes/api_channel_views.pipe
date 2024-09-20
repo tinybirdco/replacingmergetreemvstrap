@@ -1,0 +1,10 @@
+TOKEN "api_channel_views_read_token" READ
+
+NODE endpoint
+SQL >
+
+    SELECT channel, sumMerge(total_views) views
+    FROM channel_views_mv
+    GROUP BY channel
+
+
